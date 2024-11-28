@@ -1,4 +1,3 @@
-/* Genel Stiller */
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +6,7 @@
 }
 
 body {
-  background-color: #f4f4f9; /* Hafif gri beyaz zemin */
+  background-color: #f4f4f9; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,17 +41,17 @@ body {
 
 h1 {
   font-size: 2.5rem;
-  color: #3b4f5c; /* Soft dark blue for titles */
+  color: #3b4f5c; 
   margin-bottom: 15px;
 }
 
 h2, h3 {
   font-size: 1.5rem;
-  color: #4e5d6b; /* Slightly lighter than the title */
+  color: #4e5d6b; 
 }
 
 button {
-  background-color: #54a56b; /* Soft green */
+  background-color: #54a56b; 
   color: #fff;
   font-size: 1rem;
   padding: 12px 24px;
@@ -63,7 +62,7 @@ button {
 }
 
 button:hover {
-  background-color: #457b50; /* Darker green for hover */
+  background-color: #457b50; 
   transform: scale(1.05);
 }
 
@@ -72,12 +71,11 @@ button:disabled {
   cursor: not-allowed;
 }
 
-/* Okay Butonu */
 .okay-btn {
   margin-top:20px;
   margin-bottom:40px;
-  background-color: #3498db; /* Canlı mavi renk */
-  color: #fff; /* Beyaz yazı */
+  background-color: #3498db; 
+  color: #fff;
   font-size: 1.2rem;
   padding: 12px 30px;
   border: none;
@@ -85,32 +83,30 @@ button:disabled {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   font-weight: bold;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
 }
 
 .okay-btn:hover {
-  background-color: #2a80b9; /* Daha koyu mavi hover */
-  transform: scale(1.05); /* Hafif büyüme efekti */
+  background-color: #2a80b9; 
+  transform: scale(1.05); 
 }
-
 .okay-btn:active {
-  background-color: #2176a6; /* Daha koyu mavi tıklanırken */
-  transform: scale(0.95); /* Hafif küçülme efekti */
+  background-color: #2176a6; 
+  transform: scale(0.95); 
 }
 
 .okay-btn:disabled {
-  background-color: #95a5a6; /* Gri renk - devre dışı */
-  color: #ecf0f1; /* Açık gri yazı */
+  background-color: #95a5a6; 
+  color: #ecf0f1; 
   cursor: not-allowed;
-  box-shadow: none; /* Devre dışıyken gölge kaldırılır */
+  box-shadow: none; 
 }
 
-/* Reset Butonu */
 .reset-btn {
   margin-top: 20px;
   margin-bottom: 40px;
-  background-color: #9b59b6; /* Canlı mor renk */
-  color: #fff; /* Beyaz yazı */
+  background-color: #9b59b6; 
+  color: #fff; 
   font-size: 1.2rem;
   padding: 12px 30px;
   border: none;
@@ -118,32 +114,31 @@ button:disabled {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   font-weight: bold;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
 }
 
 .reset-btn:hover {
-  background-color: #8e44ad; /* Daha koyu mor hover */
-  transform: scale(1.05); /* Hafif büyüme efekti */
+  background-color: #8e44ad; 
+  transform: scale(1.05); 
 }
 
 .reset-btn:active {
-  background-color: #732d91; /* Daha koyu mor tıklanırken */
-  transform: scale(0.95); /* Hafif küçülme efekti */
+  background-color: #732d91; 
+  transform: scale(0.95); 
 }
 
 .reset-btn:disabled {
-  background-color: #bdc3c7; /* Gri renk - devre dışı */
-  color: #ecf0f1; /* Açık gri yazı */
+  background-color: #bdc3c7; 
+  color: #ecf0f1; 
   cursor: not-allowed;
-  box-shadow: none; /* Devre dışıyken gölge kaldırılır */
+  box-shadow: none; 
 }
 
-/* Roll Dice Butonu */
 .roll-btn {
   margin-top: 20px;
   margin-bottom: 40px;
-  background-color: #e67e22; /* Canlı turuncu renk */
-  color: #fff; /* Beyaz yazı */
+  background-color: #e67e22; 
+  color: #fff;
   font-size: 1.2rem;
   padding: 12px 30px;
   border: none;
@@ -151,24 +146,24 @@ button:disabled {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   font-weight: bold;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
 }
 
 .roll-btn:hover {
-  background-color: #d35400; /* Koyu turuncu hover */
-  transform: scale(1.05); /* Hafif büyüme efekti */
+  background-color: #d35400; 
+  transform: scale(1.05);
 }
 
 .roll-btn:active {
-  background-color: #c0392b; /* Koyu kırmızı tıklanırken */
-  transform: scale(0.95); /* Hafif küçülme efekti */
+  background-color: #c0392b; 
+  transform: scale(0.95); 
 }
 
 .roll-btn:disabled {
-  background-color: #bdc3c7; /* Gri renk - devre dışı */
-  color: #ecf0f1; /* Açık gri yazı */
+  background-color: #bdc3c7; 
+  color: #ecf0f1;
   cursor: not-allowed;
-  box-shadow: none; /* Devre dışıyken gölge kaldırılır */
+  box-shadow: none;
 }
 
 .dice {
@@ -177,7 +172,7 @@ button:disabled {
   height: 50px;
   margin: 5px;
   background-color: #fff;
-  border: 2px solid #4e5d6b; /* Slight dark border for the dice */
+  border: 2px solid #4e5d6b;
   border-radius: 8px;
   font-size: 1.2rem;
   font-weight: bold;
@@ -189,39 +184,35 @@ button:disabled {
 }
 
 .dice.selected {
-  background-color: #54a56b; /* Highlight selected dice with green */
+  background-color: #54a56b;
   color: #fff;
 }
 
 .dice:hover {
-  transform: scale(1.1); /* Zoom effect on hover */
+  transform: scale(1.1); 
 }
 
-/* Player 1 ve Player 2 alanları */
 .player1, .player2 {
   display: flex;
   justify-content: center;
   margin: 20px 0;
 }
 
-/* Result section (Kazanan kısmı) */
 .result {
   margin-top: 20px;
 }
 
 .result h2 {
   font-size: 1.5rem;
-  color: #2c3e50; /* Darker blue-gray color for results */
+  color: #2c3e50; 
   font-weight: bold;
 }
 
-/* Round indicator */
 h2 {
   font-size: 1.2rem;
-  color: #f39c12; /* A warm orange color to make it stand out */
+  color: #f39c12; 
 }
 
-/* Image of rules */
 img {
   width: 100%;
   max-width: 600px;
@@ -229,7 +220,6 @@ img {
   margin-bottom: 20px;
 }
 
-/* Mobil cihazlar için */
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;
