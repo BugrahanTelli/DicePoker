@@ -1,38 +1,257 @@
-.App {
-  text-align: center;
+/* Genel Stiller */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: #f4f4f9; /* Hafif gri beyaz zemin */
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  text-align: center;
+  max-width: auto;
+  margin: 20px auto;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.dice-container {
+  margin: 100px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #3b4f5c; /* Soft dark blue for titles */
+  margin-bottom: 15px;
+}
+
+h2, h3 {
+  font-size: 1.5rem;
+  color: #4e5d6b; /* Slightly lighter than the title */
+}
+
+button {
+  background-color: #54a56b; /* Soft green */
+  color: #fff;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #457b50; /* Darker green for hover */
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #b2c5b2;
+  cursor: not-allowed;
+}
+
+/* Okay Butonu */
+.okay-btn {
+  margin-top:20px;
+  margin-bottom:40px;
+  background-color: #3498db; /* Canlı mavi renk */
+  color: #fff; /* Beyaz yazı */
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+}
+
+.okay-btn:hover {
+  background-color: #2a80b9; /* Daha koyu mavi hover */
+  transform: scale(1.05); /* Hafif büyüme efekti */
+}
+
+.okay-btn:active {
+  background-color: #2176a6; /* Daha koyu mavi tıklanırken */
+  transform: scale(0.95); /* Hafif küçülme efekti */
+}
+
+.okay-btn:disabled {
+  background-color: #95a5a6; /* Gri renk - devre dışı */
+  color: #ecf0f1; /* Açık gri yazı */
+  cursor: not-allowed;
+  box-shadow: none; /* Devre dışıyken gölge kaldırılır */
+}
+
+/* Reset Butonu */
+.reset-btn {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  background-color: #9b59b6; /* Canlı mor renk */
+  color: #fff; /* Beyaz yazı */
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+}
+
+.reset-btn:hover {
+  background-color: #8e44ad; /* Daha koyu mor hover */
+  transform: scale(1.05); /* Hafif büyüme efekti */
+}
+
+.reset-btn:active {
+  background-color: #732d91; /* Daha koyu mor tıklanırken */
+  transform: scale(0.95); /* Hafif küçülme efekti */
+}
+
+.reset-btn:disabled {
+  background-color: #bdc3c7; /* Gri renk - devre dışı */
+  color: #ecf0f1; /* Açık gri yazı */
+  cursor: not-allowed;
+  box-shadow: none; /* Devre dışıyken gölge kaldırılır */
+}
+
+/* Roll Dice Butonu */
+.roll-btn {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  background-color: #e67e22; /* Canlı turuncu renk */
+  color: #fff; /* Beyaz yazı */
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+}
+
+.roll-btn:hover {
+  background-color: #d35400; /* Koyu turuncu hover */
+  transform: scale(1.05); /* Hafif büyüme efekti */
+}
+
+.roll-btn:active {
+  background-color: #c0392b; /* Koyu kırmızı tıklanırken */
+  transform: scale(0.95); /* Hafif küçülme efekti */
+}
+
+.roll-btn:disabled {
+  background-color: #bdc3c7; /* Gri renk - devre dışı */
+  color: #ecf0f1; /* Açık gri yazı */
+  cursor: not-allowed;
+  box-shadow: none; /* Devre dışıyken gölge kaldırılır */
+}
+
+.dice {
+  color: #333;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  background-color: #fff;
+  border: 2px solid #4e5d6b; /* Slight dark border for the dice */
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.dice.selected {
+  background-color: #54a56b; /* Highlight selected dice with green */
+  color: #fff;
+}
+
+.dice:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Player 1 ve Player 2 alanları */
+.player1, .player2 {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* Result section (Kazanan kısmı) */
+.result {
+  margin-top: 20px;
+}
+
+.result h2 {
+  font-size: 1.5rem;
+  color: #2c3e50; /* Darker blue-gray color for results */
+  font-weight: bold;
+}
+
+/* Round indicator */
+h2 {
+  font-size: 1.2rem;
+  color: #f39c12; /* A warm orange color to make it stand out */
+}
+
+/* Image of rules */
+img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Mobil cihazlar için */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+  
+  h2, h3 {
+    font-size: 1.2rem;
+  }
+  
+  .dice {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .roll-btn {
+    padding: 10px 25px;
+    font-size: 1rem;
   }
 }
